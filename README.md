@@ -1,15 +1,17 @@
 ### Date created
-Include the date you created this project and README file.
+10.04.2019
 
 ### Project Title
-Replace the Project Title
+My Bike Project
 
 ### Description
-Describe what your project is about and what it does
+My project focuses on some bikeshare data gathered in three cities in U.S. - Chicago, New York City and Washington.
+It can provide you with some basic calculations based on the filters you give. You may choose to filter by city, month and a weekday.
+Enjoy this app! 
 
 ### Files used
-Include the files used
+bikeshare.py
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+Inspired by https://github.com/udacity/pdsnd_github
 
