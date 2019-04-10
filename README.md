@@ -5,7 +5,7 @@
 My Bike Data Project
 
 ### Description
-My project focuses on bikeshare data gathered in three cities in U.S. - Chicago, New York City and Washington.
+This project focuses on bikeshare data gathered in three cities in U.S. - Chicago, New York City and Washington.
 It can provide you with some basic calculations based on the filters you give. You may choose to filter by city, month and a weekday.
 Enjoy this app! Also feel free to contribute to the project to make the user experience even more engaging!
 
@@ -13,5 +13,5 @@ Enjoy this app! Also feel free to contribute to the project to make the user exp
 bikeshare.py
 
 ### Credits
-Inspired by https://github.com/udacity/pdsnd_github
+Udacity Project inspired by https://github.com/udacity/pdsnd_github
 
