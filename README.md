@@ -2,7 +2,7 @@
 10.04.2019
 
 ### Project Title
-My Bike Project
+My Bike Data Project
 
 ### Description
 My project focuses on some bikeshare data gathered in three cities in U.S. - Chicago, New York City and Washington.
