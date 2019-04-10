@@ -53,7 +53,6 @@ def get_filters():
                 break
         except:
             print('Ups, seems you entered an invalid weekday name. Type in a valid one.')
-
     print('-'*40)
     return city, month, day
 
@@ -83,16 +82,12 @@ def load_data(city, month, day):
 
     # filter by month if applicable
     if month != 'all':
-        # use the index of the months list to get the corresponding int
         months = ['january', 'february', 'march', 'april', 'may', 'june']
         month = months.index(month)+1
-    
-        # filter by month to create the new dataframe
         df = df[df['month']==month]
 
     # filter by day of week if applicable
     if day != 'all':
-        # filter by day of week to create the new dataframe
         df = df[df['day_of_week']==day.title()]
     
     return df
@@ -105,15 +100,15 @@ def time_stats(df):
     start_time = time.time()
     df['Start Time'] = pd.to_datetime(df['Start Time'])
     
-    # TO DO: display the most common month
+    # Display the most common month
     df['month'] = df['Start Time'].dt.month
     popular_month = df['month'].mode()[0]
 
-    # TO DO: display the most common day of week
+    # Display the most common day of week
     df['day_of_week'] = df['Start Time'].dt.weekday_name
     popular_day_of_week = df['day_of_week'].mode()[0]
 
-    # TO DO: display the most common start hour
+    # Display the most common start hour
     df['hour'] = df['Start Time'].dt.hour
     popular_hour = df['hour'].mode()[0]
     
@@ -154,11 +149,11 @@ def trip_duration_stats(df):
     print('\nCalculating Trip Duration...\n')
     start_time = time.time()
 
-    # TO DO: display total travel time
+    #Display total travel time
     total_travel_time = df['Trip Duration'].sum()
     print('Total travel time in seconds:', total_travel_time)
 
-    # TO DO: display mean travel time
+    #Display mean travel time
     mean_travel_time = df['Trip Duration'].mean()
     print('Mean travel time in seconds:', mean_travel_time)
 
@@ -172,11 +167,11 @@ def user_stats(df):
     print('\nCalculating User Stats...\n')
     start_time = time.time()
 
-    # TO DO: Display counts of user types
+    #Display counts of user types
     user_types = df['User Type'].value_counts()
     print("User types: ", user_types)
 
-    # TO DO: Display counts of gender
+    #Display counts of gender
     
     try:
         gender_types = df['Gender'].value_counts()
@@ -184,9 +179,7 @@ def user_stats(df):
     except:
         print("There is no data on Genders.")
 
-    # TO DO: Display earliest, most recent, and most common year of birth
-    
-    
+    #Display earliest, most recent, and most common year of birth
     try:
         earliest_birth_year = df['Birth Year'].min()
         recent_birth_year = df['Birth Year'].max()
@@ -196,9 +189,7 @@ def user_stats(df):
     except:
         print("There is no data on Birth Year.")
             
-            
-
-
+      
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
@@ -207,14 +198,13 @@ def main():
     while True:
         city, month, day = get_filters()
         df = load_data(city, month, day)
-
         time_stats(df)
         station_stats(df)
         trip_duration_stats(df)
         user_stats(df)
-
         restart = input('\nWould you like to restart? Enter yes or no.\n')
-        if restart.lower() != 'yes':
+        
+		if restart.lower() != 'yes':
             break
 
 
